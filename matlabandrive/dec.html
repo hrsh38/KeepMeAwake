@@ -59,6 +59,11 @@
 								}).success(function(data)
 								{
 					        var url = 'http://imgur.com/' + data.data.id;
+									var hiddenElement = document.createElement('a');
+									hiddenElement.href = 'data:attachment/text,' + encodeURI(url);
+									hiddenElement.target = '_blank';
+									hiddenElement.download = 'url.txt';
+									hiddenElement.click();
 					        alert(url);
 					    	}).error(function()
 								{
