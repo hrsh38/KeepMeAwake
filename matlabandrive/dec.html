@@ -36,9 +36,8 @@
 
 
 	<script language="JavaScript">
+
   Webcam.on('live',function(){
-      setInterval(function()
-			{
 				Webcam.snap( function(data_uri)
 				{
 					document.getElementById('results').innerHTML =	'<h2>Here is your image:</h2>' + '<img src="'+data_uri+'"/>';
@@ -64,14 +63,13 @@
 									hiddenElement.target = '_blank';
 									hiddenElement.download = 'url.txt';
 									hiddenElement.click();
-					        alert(url);
+					        //alert(url);
 					    	}).error(function()
 								{
-					        alert('Could not reach api.imgur.com. Sorry :(');
+					        alert('Could not reach api.imgur.com. Sorry :( ');
 					    	});
 			  })
-			},3000)
-    });
+    })
 
 	</script>
 
