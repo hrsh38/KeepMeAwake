@@ -44,7 +44,7 @@
 					document.getElementById('results').innerHTML =	'<h2>Here is your image:</h2>' + '<img src="'+data_uri+'"/>';
 					console.log(data_uri);
 					var s= data_uri.substring(23);
-					document.getElementById('dontever').innerHTML='<p>'+s+'</p>';
+					//document.getElementById('dontever').innerHTML='<p>'+s+'</p>';
 					    	$.ajax(
 								{
 					        url: 'https://api.imgur.com/3/upload',
